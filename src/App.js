@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Container, Typography } from '@mui/material';
+import AddItem from './components/AddIteam';
+import SearchBar from './components/SearchBar';
+import IteamList from './components/IteamList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth="md" style={{ marginTop: '20px' }}>
+      <Typography variant="h4" gutterBottom>
+        Item Search App
+      </Typography>
+      <AddItem />  {/* Add item form */}
+      <SearchBar />
+      <IteamList />
+    </Container>
   );
 }
 
